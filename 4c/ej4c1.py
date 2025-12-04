@@ -105,12 +105,34 @@ class Student(Person):
 
     # Method that returns the description of the student
     def describe(self):
-        # Write here your code
-        pass
+
+
+
 
 
 person_1 = Person("Juan", 30)
 student_1 = Student("Ana", 25, "Systems Engineering")
+
+        
+
+    #Test para la clase person, student
+    
+    def test_describe_person():
+        #probamos con la clase person
+        p = Person ("Juan", 30)
+        assert p.describe() == "Juan is 30 years old", "describes does not return the correct value for input ('Juan', 30). It should be ' Juan is 30 years old.'"
+        assert p.name == "Juan", "name does not return the correct value for input ('Juan', 30). It should be 'Juan'"
+        assert p.age == 30, "age does not return the correct value for input('Juan', 30). It should be 30"
+    
+
+    def test_describe_student():
+        #probamos con la clase student
+        s = student("Ana", 25, "Systems Engineering")
+        assert s.describe() == "Ana is 25 years old. "Systems Engineering", "describe does not return the correct value for input ('Ana', 25, 'Systems Engineering'). It should be 'Ana is a 25 years old. Studies Systems Engineering'"
+        assert s.major == "Systems Engineering", "major does not return the correct input Student('Ana', 25, 'Systems Engineering'). It should be 'Systems Engineering'"  
+        assert insinstance(s, Person), "Student is not a subclass of Person"
+
+
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
