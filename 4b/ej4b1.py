@@ -44,17 +44,16 @@ Exemple:
 
 
 def squared_sum_ram(numbers_list):
-    # Store the list in RAM
-    # Write here your code
-    pass
-
+   number_list = [6, 4, 7]
+   expected_list = 101
+   assert square_sum_ram(numbers_list) == expected result, "square_sum_ram does not return the correct value for input [6, 4, 7]. It should be 101"
 
 def squared_sum_heap(numbers_list):
-    # Store the list in Heap
-    # You should correct and overwrite something in the following line.
-    squared_sum_list = [num**1 for num in numbers_list]
-    heap_sum = sum(squared_sum_list)
-    return heap_sum
+   number_list = [6, 4, 7]
+   expected_list = 101
+   assert squared_sum_heap(number_list) == expected result, "square_sum_heap does not return the correct value for input [6, 4, 7]. It should be 101"
+
+   return heap_sum
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
