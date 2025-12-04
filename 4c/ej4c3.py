@@ -99,6 +99,14 @@ class Rectangle(Shape):
     def get_area(self):
         pass
 
+import pytest
+from ej43c import Triangle, Rectangle, Shape
+    def test_triangle_get_area():
+        triangle = ([3, 4, 5], 4, 3)
+        assert triangle_get_area = 6.0, "Triangle_get_area() does not return the correct value for input ([3, 4, 5], 4, 3). It should be 6.0" 
+    def test_rectangle_get_area():
+        rectangle = Rectangle([5, 5, 2, 2], length=5, width=2) 
+        assert rectangle_get_area = 10.0, "Rectangle_get-area() does not return the correct value for input ([5, 5, 2, 2], length=5, width=2). It should be 10.0"
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
