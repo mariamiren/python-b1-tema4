@@ -48,23 +48,25 @@ Exemple:
     
 """
 
-
 def average_score_ram(scores_dict):
-    # Store the dictionary in RAM
-    # Write here your code
-    pass
+    # Test para la función
+    assert_average_score_ram({"Juan":8, "Maria":7, "Pedro":9}) == 8.0, "average_score_ram does not return the correct value for input {'Juan':8, 'Maria':7, 'Pedro':9}. It should be 8.0" 
+    assert_average_score_ram({"Juan":6, "Maria":6, "Pedro":6}) == 6.0, "average_score_ram does not return the correct value for input {'Juan':8, 'Maria':7, 'Pedro':9}. It should be 6.0"
+    assert_average_score_ram({"Juan":8, "Maria":10, "Pedro":9}) == 9.0, "average_score_ram does not return the correct value for input {'Juan':8, 'Maria':7, 'Pedro':9}. It should be 9.0"
 
 
-def average_score_heap(scores_dict):
-    # Store the dictionary in Heap    
-    score_list = list(scores_dict.values())
-    # You should correct and overwrite something in the following line.
-    heap_average = sum(score_list) 
+def average_score_heap(s_dict):
+    #Test para la función
+    assert_average_score_heap({"Juan":8, "Maria":7, "Pedro":9}) == 8.0, "average_score_ram does not return the correct value for input {'Juan':8, 'Maria':7, 'Pedro':9}. It should be 8.0"
+    assert_average_score_heap({"Juan":8, "Maria":7, "Pedro":9}) == 6.0, "average_score_ram does not return the correct value for input {'Juan':8, 'Maria':7, 'Pedro':9}. It should be 6.0"
+    assert_average_score_heap({"Juan":8, "Maria":7, "Pedro":9}) == 9.0, "average_score_ram does not return the correct value for input {'Juan':8, 'Maria':7, 'Pedro':9}. It should be 9.0"
+    
+    
     return heap_average
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
-# Si vols provar el teu codi, descomenta les línies següents i executa l'script
+# Si vols provar el teu codi,menta les línies següents i executa l'script
 
 # scores_dict = {"Juan": 6.7, "Maria": 9.1, "Pedro": 6.5, "Tomas": 8.2, "Julio": 9}
 
