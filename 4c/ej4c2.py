@@ -44,26 +44,36 @@ Exemple:
          Driving a car
          Riding a bicycle
 """
-
+import pytest
 from abc import ABC, abstractmethod
+from ej4c2 import Car, Bicycle, Vehicles
 
-# Write abstract class Vehicles here 
-class Vehicles():
-    def drive(self):
-        # Write here your code
-        pass
+    
+    def test_drive_car(self):
+        car = Car
+        assert car drive() == "Driving a car", "Car drive() should return 'Driving a car'"
 
-# Corret and overwrite class Car(Vehicles) here 
-class Car():
-    def drive(self):
-        # Write here your code
-        pass
 
-# Corret and overwrite class Bicycle(Vehicles) here 
-class Bicycle():
-    def drive(self):
-        # Write here your code
-        pass
+    def test_drive_bicycle(self):
+        bicycle = Bicycle ()
+        assert bicycle drive() == "Riding a bicycle", "Bicycle drive" should return 'Riding a bicycle'"
+    
+    
+    def test_drive_vehicles_abstract_method(self):
+        with pytest.raises(TypeError):
+        vehicles = vehicles()
+        vehicle.drive
+    
+        
+    def test_drive_car_insinstance_of_vehicles_class(self):
+        car = Car
+        assert insinstance(car, vehicles), "Car should be a insinstance of vehicles"
+
+    
+    def test_drive_bicycle_insistance_of_vehicles_class(self):
+        bicycle = Bicycle ()
+        assert insinstance(bicycle, vehicles), "Bicycle should be a insinstance of vehicles"
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
