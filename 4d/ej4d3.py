@@ -50,10 +50,23 @@ Exemple:
          30
 
 """
+import os
+import sys 
+from ej4d3.py import read_and_write
 
-def read_and_write():
-    # Write here your code
-    pass
+def read_and_write(capsys, monkeypatch):
+    imput_values = ["Julio\n". "30\n"]
+    monkeypatch.setartt('builtins.imput', lamdba_: imput_values.pop(0)
+    
+    read_and_write():
+    
+    assert os.path.isfile("file_txt"), "the file.txt, file should be created"
+    with open ("file_txt", "r") as file:
+        assert file.read() != "", "the file.txt, file should not be empty"
+        
+    captured = capsys.readouterr()
+    assert captured.out.strip() == "Julio\n\n30", "the output should be 'Julio\\n\\30'"
+   
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
