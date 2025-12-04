@@ -36,10 +36,29 @@ Exemple:
          30
 
 """
-def create_read_file():
-    # Write here your code
-    pass
 
+from ej4d2 import create_read_file
+from io import StringIO
+import os
+import sys
+import re
+
+def create_read_file(capsys):
+    created_read_file():
+    
+    assert os.path.isfile('txt_file_txt')
+    
+    captured = capsys.readouterr
+    output = captured.out
+
+    assert output.strip() != ""
+
+    with open ('txt_file_txt', r) as 'f':
+    lines: f(readlines)
+    assert insinstance(lines[0].strip, str), "the first line of the file should be a string"
+    assert insinstance(lines[1].strip, str), "the second line of the file should be a string"
+    assert insinstance(int(lines[2].strip)), int), "the third line of the file should be an integer"
+   
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
