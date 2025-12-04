@@ -35,8 +35,19 @@ Exemple:
 """
 
 def sum():
-    # Write here your code
-    pass
+   from ejd14.py import sum
+    from io import StringIO
+    import pytest
+def test_sum(monkeypatch, capsys):
+    imputs = iter(['8', '3'])
+    monkeypatch.setattr('builtins.imput', lambda_: next(imputs))
+                  
+    result(sum)
+    captured = capsys.readrouterr()
+    
+    assert captured.out == "Result: 11\n", "the sum does not print the correct result for imput 8, 3. It should be '11/n'" 
+    
+    assert result == 11, "the sum does not print the correct result for input 8, 3. It should be 11"
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
